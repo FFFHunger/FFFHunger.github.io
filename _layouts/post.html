@@ -1,0 +1,93 @@
+---
+layout: default
+---
+
+<article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      <img src="/images/calendar.png" width="20px"/> 
+      <time datetime="{{page.date | date: date_to_xmlschema}}" itemprop="datePublished" class="post-meta__date date">{{page.date | date: "%F"}}</time>  
+         
+      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
+    </p>
+    </div>
+  </header>
+
+  <section class="post">
+    {{ content }}
+
+  </section>
+</article>
+
+{% include share.html %}
+<a name="buttom"></a>
+{% include dashang.html %}
+{% include new-old.html %}
+{% include comments.html %}
+<!--css3实现回到顶部特效按钮-->
+<div class="kunbang">
+	<div class="topor">
+		<a href="#top">
+			<
+		</a>
+	</div>
+	<div class="orbottom">
+		<a href="#buttom">
+			>
+		</a>
+	</div>
+</div>
+<style type="text/css">
+	.kunbang
+	{
+	z-index: 999;
+	top: 80%;
+	right:0% ;
+	position: fixed;
+	}
+	.topor{
+		display: block;
+		background: none repeat scroll 0 0 #000000;
+		height: 35px;
+		width: 35px;
+		transition: all 0.3s ease 0s;
+				transform:rotate(90deg);
+		-ms-transform:rotate(90deg); /* Internet Explorer */
+		-moz-transform:rotate(90deg); /* Firefox */
+		-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+		-o-transform:rotate(90deg); /* Opera */
+	}
+	.topor:hover{
+		background: none repeat scroll 0 0 #EA5F00;
+		opacity: 0.8;
+		}
+	.topor a{
+		font-size: 30px;
+		color: #FFFFFF;
+		text-align: center;
+		padding-left: 6px;
+	}
+	.orbottom{
+		display: block;
+		background: none repeat scroll 0 0 #EA5F00;
+		height: 35px;
+		width: 35px;
+		transition: all 0.3s ease 0s;
+				transform:rotate(90deg);
+		-ms-transform:rotate(90deg); /* Internet Explorer */
+		-moz-transform:rotate(90deg); /* Firefox */
+		-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+		-o-transform:rotate(90deg); /* Opera */
+	}
+	.orbottom:hover{
+		background: none repeat scroll 0 0 #000000;
+		opacity: 0.8;
+		}
+	.orbottom a{
+		font-size: 30px;
+		color: #FFFFFF;
+		text-align: center;
+		padding-left: 6px;
+	}
+	</style>
