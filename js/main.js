@@ -7,7 +7,7 @@ $(document).ready(function() {
     if ($('.panel-cover').hasClass('panel-cover--collapsed')) return;
     $('.main-post-list').removeClass('hidden');
     currentWidth = $('.panel-cover').width();
-    if (currentWidth < 1400) {
+    if (currentWidth < 960) {
       $('.panel-cover').addClass('panel-cover--collapsed');
     } else {
       $('.panel-cover').css('max-width',currentWidth);
